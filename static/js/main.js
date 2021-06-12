@@ -12,9 +12,9 @@ let calculateDayIndex = (day, month, year) => {
 
     yy = parseInt(yearTemp3);
     
+    var dayIndex =  (((cc/4) - 2 * cc - 1) + ((5 * yy/4)) + ((26 * (mm + 1)/10)) + dd ) % 7 // calculates the day index
 
-    console.log(cc);
-    console.log(yy);
+    return dayIndex;
 }
 
 calculateDayIndex(14, 10, 1994);
