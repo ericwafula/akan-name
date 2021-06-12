@@ -82,6 +82,13 @@ body{
     gap: 10px;
 }
 
+/* Styles the hover status */
+.main button:hover{
+    background-color: var(--dark-brown);
+    color: white;
+    border: none;
+}
+
 /* Styles the button icon */
 .main button span{
     font-weight: bold;
