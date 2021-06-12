@@ -1,4 +1,14 @@
-/* Overides default margin and padding values */
+/* Adds style variables */
+:root{
+    --padding: 170px;
+    --primary-margin: 30px;
+    --secondary-margin: 50px;
+    --light-brown: #78542C;
+    --dark-brown: #362215;
+    --dark-green: #030A01;
+}
+
+/* Overrides default margin and padding values */
 *{
     margin: 0;
     padding: 0;
@@ -7,7 +17,7 @@
 /* Adds background image to the body */
 body{
     background-image: url("../images/App_background.png");
-    padding: 170px;
+    padding: var(--padding);
     background-repeat: no-repeat;
     background-size: cover;
 }
