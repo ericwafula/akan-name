@@ -1,3 +1,4 @@
+// Calculates day index and returns it as a value
 let calculateDayIndex = (day, month, year) => {
     let dd = day;
     let mm = month;
@@ -12,9 +13,44 @@ let calculateDayIndex = (day, month, year) => {
 
     yy = parseInt(yearTemp3);
     
-    var dayIndex =  (((cc/4) - 2 * cc - 1) + ((5 * yy/4)) + ((26 * (mm + 1)/10)) + dd ) % 7 // calculates the day index
+    let dayIndex =  (((cc/4) - 2 * cc - 1) + ((5 * yy/4)) + ((26 * (mm + 1)/10)) + dd ) % 7 // calculates the day index
+
+    dayIndex = Math.floor(dayIndex); // rounds downward to its nearest integer
 
     return dayIndex;
 }
 
-calculateDayIndex(14, 10, 1994);
+
+// Returns the Akan name
+function getDayAndName(){
+    // days of the week array
+    let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    // akan male names array
+    let maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+
+    // akan female names array
+    let femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+
+    // call our function & pass arguments (input from user), day, month, year
+    let index = calculateDayIndex(14, 10, 1994); 
+    
+    let day = daysOfWeek[index - 1]; 
+    let gender = "M";  // gender input from user
+
+    let maleAkanName = maleNames[index - 1]; // Returns Male name
+    let femaleAkanName = femaleNames[index -1]; // Returns Female name
+       
+
+    // console.log(day);
+
+    if (gender === "M"){
+        console.log("You were born on " + day + " and your Akan name is " + maleAkanName + ".");
+    } else {
+        console.log("You were born on " + day + " and your Akan name is " + femaleAkanName + ".");
+    }
+
+}
+
+
+getDayAndName();
