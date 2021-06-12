@@ -1,8 +1,10 @@
+/* Overides default margin and padding values */
 *{
     margin: 0;
     padding: 0;
 }
 
+/* Adds background image to the body */
 body{
     background-image: url("../images/App_background.png");
     padding: 170px;
