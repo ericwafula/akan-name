@@ -265,3 +265,11 @@ dist/
 ###SVN###
 
 .svn/
+
+## Akan Name
+
+index.html
+README.md
+css
+images
+.gitignore
