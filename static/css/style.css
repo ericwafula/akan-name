@@ -105,3 +105,19 @@ body{
 .main button span{
     font-weight: bold;
 }
+
+/* Styles the modal */
+.modal-content{
+    background-color: var(--dark-green);
+    border: var(--light-brown) solid 2px;
+    border-radius: var(--border-radius);
+    width: 600px;
+    height: 600px;
+}
+
+/* Styles the modal's header */
+.modal-header{
+    border: none;
+    padding: 30px;
+}
+
