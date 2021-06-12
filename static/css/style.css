@@ -89,6 +89,18 @@ body{
     border: none;
 }
 
+/* Styles the focus state */
+.main button:focus{
+    border: none;
+    background-color: var(--light-brown);
+    box-shadow: none;
+}
+
+/* Styles the active state */
+.main button:active{
+    border: none;
+}
+
 /* Styles the button icon */
 .main button span{
     font-weight: bold;
