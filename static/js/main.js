@@ -40,16 +40,12 @@ function getDayAndName(){
 
     let maleAkanName = maleNames[index - 1]; // Returns Male name
     let femaleAkanName = femaleNames[index -1]; // Returns Female name
-       
-
-    // console.log(day);
 
     if (gender === "M"){
         console.log("You were born on " + day + " and your Akan name is " + maleAkanName + ".");
     } else {
         console.log("You were born on " + day + " and your Akan name is " + femaleAkanName + ".");
     }
-
 }
 
 
