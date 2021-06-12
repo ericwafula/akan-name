@@ -3,10 +3,13 @@ let calculateDayIndex = (day, month, year) => {
     let mm = month;
     let yy = year;
 
-    let temp1 = yy.toString();
-    let temp2 = temp1[0] + temp1[1]; // takes the initial first two digits
+    let yearTemp1 = yy.toString();  // takes the year value and turns it to a string
+    let yearTemp2 = yearTemp1[0] + yearTemp1[1]; // takes the initial first two digits
 
-    let cc = parseInt(temp2); // Converts temporary value into an integer
+    let cc = parseInt(yearTemp2); // Converts temporary value into an integer
+
+    // let yearTemp1 =
+    
 
     console.log(cc);
 }
