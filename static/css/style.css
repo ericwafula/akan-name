@@ -50,3 +50,16 @@ body{
     margin-top: var(--primary-margin);
     letter-spacing: 8.1px;
 }
+
+/* Styles the paragraph */
+.main p{
+    color: var(--dark-brown);
+    font-size: var(--paragraph);
+    margin-top: var(--primary-margin);
+    font-weight: 500;
+    letter-spacing: 2.7px;
+}
+
+.main p span{
+    color: var(--light-brown);
+}
