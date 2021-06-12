@@ -6,4 +6,7 @@
 body{
     background-image: url("../images/App_background.png");
     padding: 170px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
