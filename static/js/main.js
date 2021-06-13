@@ -12,8 +12,7 @@ var calculateDayIndex = function(day, month, year) {
     let yearTemp3 = yearTemp1[2] + yearTemp1[3]; // takes the last two digits
 
     yy = parseInt(yearTemp3);
-    
-    let dayIndex =  (((cc/4) - 2 * cc - 1) + ((5 * yy/4)) + ((26 * (mm + 1)/10)) + dd ) % 7 // calculates the day index
+    let dayIndex = (((cc/4) - 2 * cc - 1) + ((5 * yy/4)) + ((26 * (mm + 1)/10)) + dd ) % 7 // calculates the day index;
 
     dayIndex = Math.floor(dayIndex); // rounds downward to its nearest integer
 
