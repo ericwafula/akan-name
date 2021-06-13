@@ -166,6 +166,8 @@ body{
     font-size: var(--paragraph);
     border-radius: 10px;
     margin-bottom: 10px;
+    outline: none;
+    border: none;
 }
 
 /* Styles the radio buttons */
@@ -201,10 +203,19 @@ body{
     box-shadow: none;
 }
 
+/* Styles the output box */
 .output-box{
     width: 280px;
     height: 150px;
     border: solid var(--light-brown) 2px;
     border-radius: 20px;
     margin-top: 10px;
+    color: var(--light-brown);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: var(--paragraph);
 }
+

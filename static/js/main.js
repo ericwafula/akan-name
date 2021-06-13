@@ -1,5 +1,5 @@
 // Calculates day index and returns it as a value
-let calculateDayIndex = (day, month, year) => {
+var calculateDayIndex = (day, month, year) => {
     let dd = day;
     let mm = month;
     let yy = year;
@@ -20,9 +20,21 @@ let calculateDayIndex = (day, month, year) => {
     return dayIndex;
 }
 
+// This was assigned globally to reduce the need of clicking the modal button twice in-order to change default output box paragraph text in HTML
+var button = document.getElementById("modal-button");
+
+// Listens to when the button has been clicked
+button.addEventListener("click", function(){
+    button.disabled = false;
+    getDayAndName();
+});
 
 // Returns the Akan name
 function getDayAndName(){
+    // Gets HTML elements nad stores it in a variable
+    let outputText = document.getElementById("output-text");
+    
+
     // days of the week array
     let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -42,11 +54,8 @@ function getDayAndName(){
     let femaleAkanName = femaleNames[index -1]; // Returns Female name
 
     if (gender === "M"){
-        console.log("You were born on " + day + " and your Akan name is " + maleAkanName + ".");
+        outputText.innerHTML = "You were born on " + day + " and your Akan name is " + maleAkanName + ".";
     } else {
-        console.log("You were born on " + day + " and your Akan name is " + femaleAkanName + ".");
+        outputText.innerHTML = "You were born on " + day + " and your Akan name is " + femaleAkanName + ".";
     }
 }
-
-
-getDayAndName();
