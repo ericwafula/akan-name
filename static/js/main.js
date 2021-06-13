@@ -36,6 +36,7 @@ var getDayAndName = function(){
     // Gets the date values in form of string
     let date = document.getElementById("birthday").value;
 
+    // stores values from calendar
     let day = parseInt(date[8] + date[9]);
     let month = parseInt(date[5] + date[6]);
     let year = parseInt(date[0] + date[1] + date[2] + date[3]);
