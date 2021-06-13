@@ -34,6 +34,15 @@ var getDayAndName = function(){
     let female = document.getElementById("female");
     let gender;
 
+    // Gets the date values in form of string
+    let date = document.getElementById("birthday").value;
+
+    let day = parseInt(date[8] + date[9]);
+    let month = parseInt(date[5] + date[6]);
+    let year = parseInt(date[0] + date[1] + date[2] + date[3]);
+
+    console.log(date);
+
     // Assigns gender to the gender variable
     if (male.checked === true){
         gender = "Male";
@@ -51,19 +60,20 @@ var getDayAndName = function(){
     let femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
     // call our function & pass arguments (input from user), day, month, year
-    let index = calculateDayIndex(14, 10, 1994); 
+    let index = calculateDayIndex(day, month, year);
 
-    let day = daysOfWeek[index - 1]; 
+    let dayOfWeek = daysOfWeek[index - 1]; 
 
     // gender input from user
 
     let maleAkanName = maleNames[index - 1]; // Returns Male name
+    
     let femaleAkanName = femaleNames[index -1]; // Returns Female name
 
-
+    // Outputs Akan names based on respective genders
     if (gender === "Male"){
-        outputText.innerHTML = "You were born on " + day + " and your Akan name is " + maleAkanName + ".";
+        outputText.innerHTML = "You were born on " + dayOfWeek + " and your Akan name is " + maleAkanName + ".";
     } else {
-        outputText.innerHTML = "You were born on " + day + " and your Akan name is " + femaleAkanName + ".";
+        outputText.innerHTML = "You were born on " + dayOfWeek + " and your Akan name is " + femaleAkanName + ".";
     }
 }

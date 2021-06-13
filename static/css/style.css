@@ -210,12 +210,15 @@ body{
     border: solid var(--light-brown) 2px;
     border-radius: 20px;
     margin-top: 10px;
-    color: var(--light-brown);
+    color: white;
     font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
     font-size: var(--paragraph);
 }
 
