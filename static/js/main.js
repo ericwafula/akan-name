@@ -1,5 +1,5 @@
 // Calculates day index and returns it as a value
-var calculateDayIndex = (day, month, year) => {
+var calculateDayIndex = function(day, month, year) {
     let dd = day;
     let mm = month;
     let yy = year;
@@ -24,16 +24,22 @@ var calculateDayIndex = (day, month, year) => {
 var button = document.getElementById("modal-button");
 
 // Listens to when the button has been clicked
-button.addEventListener("click", function(){
-    button.disabled = false;
-    getDayAndName();
-});
+button.addEventListener("click", () => getDayAndName());
 
 // Returns the Akan name
-function getDayAndName(){
-    // Gets HTML elements nad stores it in a variable
+var getDayAndName = function(){
+    // Gets HTML elements and stores them in variables
     let outputText = document.getElementById("output-text");
-    
+    let male = document.getElementById("male");
+    let female = document.getElementById("female");
+    let gender;
+
+    // Assigns gender to the gender variable
+    if (male.checked === true){
+        gender = "Male";
+    } else if (female.checked === true){
+        gender = "Female";
+    }
 
     // days of the week array
     let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -46,14 +52,16 @@ function getDayAndName(){
 
     // call our function & pass arguments (input from user), day, month, year
     let index = calculateDayIndex(14, 10, 1994); 
-    
+
     let day = daysOfWeek[index - 1]; 
-    let gender = "M";  // gender input from user
+
+    // gender input from user
 
     let maleAkanName = maleNames[index - 1]; // Returns Male name
     let femaleAkanName = femaleNames[index -1]; // Returns Female name
 
-    if (gender === "M"){
+
+    if (gender === "Male"){
         outputText.innerHTML = "You were born on " + day + " and your Akan name is " + maleAkanName + ".";
     } else {
         outputText.innerHTML = "You were born on " + day + " and your Akan name is " + femaleAkanName + ".";
